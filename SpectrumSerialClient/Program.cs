@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Services.SerialService svc = new Services.SerialService();
+            svc.Create("COM1");
+
+            Console.WriteLine("Connected, press Enter to exit.");
+            Console.ReadLine();
         }
     }
 }
